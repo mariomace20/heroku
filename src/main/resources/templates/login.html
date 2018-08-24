@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="icon" href="static/img/libro-icon.png">
+		<title>SISCAE :: Login ::</title>
+		
+		<!-- Bootstrap CSS -->
+   		<link rel="stylesheet" type="text/css" th:href="@{/css/user/bootstrap.min.css}">
+		<link rel="stylesheet" type="text/css" th:href="@{/css/user/signin.css}">
+		
+	</head>
+	
+	<body class="text-center">
+		<form th:action="@{/siscae/login}" th:object=${usuario} method="post" class="form-signin" >
+			<img class="mb-4" th:src="@{/img/libros.png}" alt="" width="72" height="72">
+			<h1 class="h3 mb-3 font-weight-normal">SISCAE Login</h1>
+			<label for="inputEmail" class="sr-only">Usuario</label> 
+			<input name="usuario" type="text" id="inputEmail" class="form-control" th:field ="*{userName}" placeholder="Usuario" required="" autofocus=""> 
+			<label for="inputPassword" class="sr-only">Contraseña</label> 
+			<input name="contraseña" type="password" id="inputPassword" class="form-control" th:field ="*{pass}" placeholder="Contraseña" required="">
+			<div th:if="${error!=null}"class="alert alert-danger" role="alert">Usuario o contraseña incorrectos</div>
+			<div th:if="${logout!=null}"class="alert alert-info" role="alert">Cerró Sesión correctamente</div>
+			<div class="checkbox mb-3">
+				<label> <input type="checkbox" value="remember-me"> Recuerdame</label>
+			</div>
+			<button class="btn btn-lg btn-primary btn-block" type="submit">INGRESAR</button>
+			<p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+		</form>
+
+	</body>
+</html>

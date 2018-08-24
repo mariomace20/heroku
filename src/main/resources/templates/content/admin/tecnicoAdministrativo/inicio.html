@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<htmlxmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/admin/layout}" >
+
+<head>
+	<meta charset="UTF-8">
+</head>
+
+<body>
+	<section layout:fragment="content" class="banner-area relative tamaño-contenido-inicio-biblioteca">
+
+    <section class="content-header">
+      <div class="col-md-offset-3">
+      <h1>Registrar Persona Externa</h1>
+      </div>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
+        <li><a href="#">Registrar Persona Externa</a></li>
+      </ol>
+    </section>
+
+     <!--Contenido principal -->
+    <section class="content">
+      <div class="box">
+        <div class="box-header with-border">
+          <div class="col-md-offset-3">
+          <h3 class="box-title">Ingresar datos</h3>
+          </div>
+          <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+                    title="Collapse">
+              <i class="fa fa-minus"></i></button>
+            <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+              <i class="fa fa-times"></i></button>
+          </div>
+        </div>
+        <div class="box-body">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title"></h3>
+            </div>
+             <!--/.box-header -->
+             <!--form start-->
+             <div class="container">
+            <form role="form" class="form-horizontal">
+              <div class="box-body">
+                <div class="form-group">
+                  <label class="control-label col-md-4">TIPO DE DOCUMENTO</label>
+                  <div class="col-md-8">
+                <select class="form-control">
+                  <option value="tipo de doc"> DNI</option>
+                  <option value="tipo de doc"> CARNÉ UNIVERSITARIO</option>
+                  <option value="tipo de doc"> CARNÉ DE BIBLIOTECA</option>
+                  <option value="tipo de doc"> CARNÉ DE EXTRANJERÍA</option>
+                  <option value="tipo de doc"> PASAPORTE</option>
+                  <option value="tipo de doc"> OTRO</option>
+                </select>
+                </div>
+                </div>
+                <div class="form-group">
+                <label for="codigo" class="control-label col-md-4">CÓDIGO</label>
+                <div class="col-md-8">
+                <input type="text" name="codigo" id="codigo" class="form-control" placeholder="Código" required>
+                </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-4">CATEGORÍA</label>
+                  <div class="col-md-8">
+                  <select class="form-control">
+                    <option value="categoria">PREGRADO</option>
+                    <option value="categoria">POSTGRADO</option>
+                    <option value="categoria">PROFESOR</option>
+                    <option value="categoria">EXTERNO  </option>
+                  </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                <label for="nombres" class="control-label col-md-4">NOMBRES</label>
+                <div class="col-md-8">
+                <input type="text" id="nombres" name="nombres" class="form-control" placeholder="Nombres" required>
+                </div>
+                </div>
+                <div class="form-group">
+                <label for="apellidos" class="control-label col-md-4">APELLIDOS</label>
+                <div class="col-md-8">
+                <input type="text" id="apellidos" name="apellidos" class="form-control" placeholder="Apellidos" required>
+                </div>
+                </div>
+                <div class="form-group">
+                <label for="eap" class="control-label col-md-4">ESCUELA</label>
+                <div class="col-md-8">
+                <input type="text" name="eap" id="eap" class="form-control" placeholder="EAP" required>
+                </div>
+                </div>
+                <div class="form-group">
+                  <label for="sexo" class="control-label col-md-4">SEXO</label>
+                  <div class="col-md-8">
+                  <select class="form-control" id="sexo">
+                    <option name="sexo">MASCULINO</option>
+                    <option name="sexo">FEMENINO</option>
+                  </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                <label for="fnac" class="control-label col-md-4">FECHA DE NACIMIENTO</label>
+                <div class="col-md-8">
+                <input type="date" id="fnac" class="form-control" required>
+                </div>
+                </div>
+                <div class="form-group">
+                <label for="telefono" class="control-label col-md-4">TELÉFONO</label>
+                <div class="col-md-8">
+                <input type="text" id="telefono" name="telefono" class="form-control" placeholder="Teléfono">
+                </div>
+                </div>
+              </div>
+               <!--/.box-body --> 
+
+              <div class="box-footer container">
+                <div class="col-md-offset-3">
+                  <!--<div class="form-group"> -->
+                    <label class="control-label">
+                      <button type="submit" class="btn btn-primary form-control">REGISTRAR</button>
+                    </label>
+                  <!--</div> -->
+                  <!--<div class="form-group">-->
+                    <label class="control-label">
+                      <button type="reset" class="btn btn-default">CANCELAR</button>
+                    </label>
+                  <!--</div> -->
+                </div>
+              </div>
+            </form>
+            </div>
+          </div>
+        </div>
+
+	</section>
+
+</body>
+
+
+</html>

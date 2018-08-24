@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<htmlxmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/layout}" >
+
+<head>
+	<meta charset="UTF-8">
+</head>
+
+<body>
+	<section layout:fragment="content" class="banner-area relative tamaño-contenido-inicio-biblioteca">
+		<div class="container contenido">
+			<div th:if="${areaestudio.nombre} == 'Biblioteca'">
+			
+				<h3 th:text="(${areaestudio.nombre}) + ' FISI'"></h3>
+				<p th:text="'Seleccione su ' + (${tipoRercuso.nombre}) + ' a usar'"></p>
+				<div class="row">
+					<form th:each="recurso,iterStat : ${recursos}" class="formulario">
+                        <div class="recurso">
+                            <img th:if="${recurso.estado} == 'disponible'" th:src="@{/img/cubo_verde.png}"  width="40" height="40">
+                            <img th:if="${recurso.estado} == 'ocupado'" th:src="@{/img/cubo_rojo.png}"  width="40" height="40">
+                            <img th:if="${recurso.estado} == 'liberable'" th:src="@{/img/cubo_amarillo.png}"  width="40" height="40">
+                            </br>
+                            <input class="numero" type="text" name="recursoSeleccionado" th:value="${recurso.recurso.idRecurso}" readonly>
+                            <!--<input class="numero" type="text" name="recursoSeleccionado" th:value="${iterStat.count}" readonly>-->
+                            <p th:class="${recurso.estado}" th:text="${recurso.estado}"></p>
+                            <input type="submit" value="SOLICITAR" th:class="${recurso.estado eq 'ocupado'}? 'genric-btn info-border circle arrow invisible-btn-solicitar' : 'genric-btn info-border circle arrow'">
+                        </div>
+                    </form>			
+				</div>
+				
+			</div>
+			 
+			<div th:if="${areaestudio.nombre} == 'Videoteca'">
+			
+				<h3 th:text="(${areaestudio.nombre}) + ' FISI'"></h3>
+				<p th:text="'Seleccione su ' + (${tipoRercuso.nombre}) + ' a usar'"></p>
+				<div class="row">
+					<form th:each="recurso : ${recursos}" class="formulario">
+                        <div class="recurso">
+                            <img th:src="@{/img/pantalla.png}"  width="40" height="40">
+                            </br>
+                            <input class="numero" type="text" name="recursoSeleccionado" th:value="${recurso.recurso.idRecurso}" readonly>
+                            <!--<input class="numero" type="text" name="recursoSeleccionada" th:value="${iterStat.count}" readonly>-->
+                            <p th:class="${recurso.estado}" th:text="${recurso.estado}"></p>
+                            <input type="submit" value="SOLICITAR" th:class="${recurso.estado eq 'ocupado'}? 'genric-btn info-border circle arrow invisible-btn-solicitar' : 'genric-btn info-border circle arrow'">
+                        </div>
+                    </form>			
+				</div>
+				
+			</div>
+			
+			<div th:if="${areaestudio.nombre} == 'Aula Grupal'">
+			
+				<h3 th:text="(${areaestudio.nombre}) + ' FISI'"></h3>
+				<p th:text="'Seleccione su ' + (${tipoRercuso.nombre}) + ' a usar'"></p>
+				<div class="row">
+					<form th:each="recurso : ${recursos}" class="formulario">
+                        <div class="recurso">
+                            <img th:src="@{/img/mesa.png}" width="200" height="150">
+                            </br>
+                            <input class="numero" type="text" name="recursoSeleccionado" th:value="${recurso.recurso.idRecurso}" readonly>
+                            <!--<input class="numero" type="text" name="recursoSeleccionada" th:value="${iterStat.count}" readonly>-->
+                            <p th:class="${recurso.estado}" th:text="${recurso.estado}"></p>
+                            <p th:text="'Capacidad: ' + ${recurso.cantidadOcupada} + '/' + ${recurso.recurso.maxCapacidad}"></p>
+                            <input type="submit" value="SOLICITAR" th:class="${recurso.estado eq 'ocupado'}? 'genric-btn info-border circle arrow invisible-btn-solicitar' : 'genric-btn info-border circle arrow'">
+                        </div>
+                    </form>			
+				</div>
+				
+			</div>
+			
+		</div>
+	</section>
+
+</body>
+
+
+</html>

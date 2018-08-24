@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/layout}" >
+
+<head>
+	<meta charset="UTF-8">
+</head>
+
+<body>
+	<!-- Section -->
+	<section layout:fragment="content" class="banner-area relative tamaño-contenido-registro-manual">
+
+		<div class="container contenido">
+			<h3>Registrar fin de Préstamo</h3>
+			<p>Ingrese el código del solicitante:</p>
+			<form action="#" class="formulario-alumno-nuevo">
+				<div class="item-form">
+					<h4>Codigo</h4>
+					<input type="text" name="cod_alu" placeholder="Codigo de alumno"
+						class="single-input-primary">
+				</div>
+				<input type="submit" value="TERMINAR PRÉSTAMO"
+					class="genric-btn success btn-registrar-manual">
+
+			</form>
+		</div>
+	</section>
+	<!-- FIN Section -->
+</body>
+
+</html>

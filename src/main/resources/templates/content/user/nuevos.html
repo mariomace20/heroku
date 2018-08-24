@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/layout}" >
+
+<head>
+	<meta charset="UTF-8">
+</head>
+
+<body>
+	<!-- Section -->
+	<section layout:fragment="content" class="banner-area relative tamaño-contenido-registro-manual">
+
+		<div class="container contenido">
+			<h3>Alumnos Nuevos</h3>
+			<p>Ingrese datos de alumno</p>
+			<form action="#" class="formulario-alumno-nuevo">
+				<div class="item-form">
+					<h4>Codigo</h4>
+					<input type="text" name="cod_alu" placeholder="Codigo de alumno"
+						class="single-input-primary">
+				</div>
+				<div class="item-form">
+					<h4>Nombres</h4>
+					<input type="text" name="nom_alu" placeholder="Nombres"
+						class="single-input-primary">
+				</div>
+				<div class="item-form">
+					<h4>Apellidos</h4>
+					<input type="text" name="app_alu" placeholder="Apellidos"
+						class="single-input-primary">
+				</div>
+				<div class="item-form">
+					<h4>Sexo</h4>
+					<select name="sexo_alu">
+						<option value="-1">--</option>
+						<option value="M">Masculino</option>
+						<option value="F">Femenino</option>
+					</select>
+				</div>
+
+				<div class="item-form">
+					<h4>Fecha de nacimiento</h4>
+					<input type="date" name="fn_alu" placeholder="Fecha de nacimiento"
+						class="single-input-primary">
+				</div>
+
+				<div class="item-form">
+					<h4>Telefono</h4>
+					<input type="number" name="telf_alu" placeholder="Telefono celular"
+						class="single-input-primary">
+				</div>
+				<div class="item-form">
+					<h4>Documento de identidad</h4>
+					<input type="number" name="dni_alu"
+						placeholder="Documento de identidad" class="single-input-primary">
+				</div>
+				<div class="item-form">
+					<h4>Facultad</h4>
+					<select name="facultad_alu">
+						<option value="-1">--</option>
+						<option th:each="facultad : ${facultades}"
+							th:value="${facultad.id_facultad}" th:text="${facultad.nombre}"></option>
+					</select>
+				</div>
+				<div class="item-form">
+					<h4>Escuela</h4>
+					<select name="escuela_alu">
+						<option value="-1">--</option>
+						<option th:each="escuela : ${escuelas}"
+							th:value="${escuela.id_escuela}" th:text="${escuela.nombre}"></option>
+					</select>
+				</div>
+				<input type="submit" value="ENVIAR"
+					class="genric-btn success btn-registrar-manual">
+
+			</form>
+		</div>
+	</section>
+	<!-- FIN Section -->
+</body>
+
+</html>

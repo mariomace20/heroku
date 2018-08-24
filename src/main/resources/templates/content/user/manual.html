@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/layout}">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+	<section layout:fragment="content"
+		class="banner-area relative tamaño-contenido-detalle-biblioteca">
+		<div class="container contenido">
+			<h3>Registro manual</h3>
+			<p>Ingrese su código de alumno</p>
+			<form action="#">
+				<input type="text" name="cod_alu" placeholder="Codigo de alumno"
+					class="single-input-primary">
+				<div th:each="prestamo : ${prestamos}" class="recurso">
+					<img 
+						th:if="${prestamo.estadoPrestamo} == 'disponible'"
+						th:src="@{/img/cubo_verde.png}" width="40" height="40">
+					<img
+						th:if="${prestamo.estadoPrestamo} == 'ocupada'"
+						th:src="@{/img/cubo_rojo.png}" width="40" height="40">
+					<img
+						th:if="${prestamo.estadoPrestamo} == 'liberable'"
+						th:src="@{/img/cubo_amarillo.png}" width="40" height="40">
+					</br>
+					<input class="numero" type="text"
+						th:name="'cubiculoSeleccionado'+(${prestamo.idRecurso})"
+						th:value="${prestamo.idRecurso}" readonly>
+					<p  th:class="${prestamo.estadoPrestamo}"
+						th:text="${prestamo.estadoPrestamo}"></p>
+					<input type="checkbox" th:name="'SOLICITAR'+(${prestamo.idRecurso})"
+						th:class="${prestamo.estadoPrestamo eq 'ocupada'}? 'genric-btn info-border circle arrow invisible-btn-solicitar' : 'genric-btn info-border circle arrow'">
+				</div>
+				<input type="submit" value="enviar">
+			</form>
+		</div>
+
+	</section>
+</body>
+</html>

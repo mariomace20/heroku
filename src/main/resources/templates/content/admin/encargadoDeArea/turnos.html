@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<htmlxmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/admin/layout}" >
+
+<head>
+	<meta charset="UTF-8">
+</head>
+
+<body>
+<section layout:fragment="content" >
+     
+    <section class="content-header">
+      <div class="col-md-offset-2">
+      <h1>Personas Registradas</h1>
+      </div>
+    </section>
+
+     <!--Contenido principal -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+  
+          <!-- /.box -->
+          <div class="box">
+            <div class="box-header">
+              <div class="col-md-offset-2">
+              <h3 class="box-title">Según turno</h3>
+              <div class="col-md-offset-9">
+                <input type="month"> <br>
+                <button>DESCARGAR REPORTE</button>
+              </div>
+              </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body table-responsive">
+              <div class="col-md-offset-2">
+              <table id="example1" class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                <th>Número</th>
+                <th>Código</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Categoría</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>01</td>
+                <td>17200186</td>
+                <td>JUAN CARLOS</td>
+                <td>TORRES GARCIA</td>
+                <td>PREGRADO</td>
+                </tr>
+                <tr>
+                <td>02</td>
+                <td>17200037</td>
+                <td>EDINSON PAOLO</td>
+                <td>TACCA MORAN</td>
+                <td>PREGRADO</td>
+                </tr>
+                <tr>
+                <td>03</td>
+                <td>16200019</td>
+                <td>LUIS GERMAIN</td>
+                <td>DESCHAMPS EVANS</td>
+                <td>PREGRADO</td>               
+                </tr>
+                <tr>
+                <td>04</td>
+                <td>17200035</td>
+                <td>RENZO OMAR</td>
+                <td>STARK MAMANI</td>
+                <td>PREGRADO</td>
+                </tr>
+                <tr>
+                <td>05</td>
+                <td>01322564</td>
+                <td>ANDERSON</td>
+                <td>GUADALUPE SNIDER</td>
+                <td>PROFESOR</td>
+                </tr>
+                <tr>
+                <td>06</td>
+                <td>17200080</td>
+                <td>LENIN EINSTEIN</td>
+                <td>MARSHALL CONDORI</td>
+                <td>PREGRADO</td>
+                </tr>
+                <tr>
+                <td>07</td>
+                <td>15200084</td>
+                <td>KENNEDY ROUSSEAU</td>
+                <td>CORTEZ REUS</td>
+                <td>PREGRADO</td>
+                </tr>
+                <tr>
+                <td>08</td>
+                <td>17200117</td>
+                <td>ALEXIS DIDDIER</td>
+                <td>HENDERSSON HATFIELD</td>
+                <td>PREGRADO</td>
+                </tr>
+                <tr>
+                <td>09</td>
+                <td>17200059</td>
+                <td>ENRIQUE FRANCISCO</td>
+                <td>BRADSHAW QUISPE</td>
+                <td>PREGRADO</td>
+                </tr>
+                <tr>
+                <td>10</td>
+                <td>21472381</td>
+                <td>JEFERSON ARMANDO</td>
+                <td>AMARU CONDORCANQUI</td>
+                <td>PROFESOR</td>
+                </tr>
+                <tr>
+                <td>11</td>
+                <td>16200071</td>
+                <td>JEFFERSON AGUSTIN</td>
+                <td>BANNER SILVA</td>
+                <td>PREGRADO</td>
+                </tr>
+                <tr>
+                <td>12</td>
+                <td>12200028</td>
+                <td>PATRICK EZEQUIEL</td>
+                <td>DECKER WALTON</td>
+                <td>POSTGRADO</td>
+                </tr>
+                <tr>
+                <td>13</td>   
+                <td>17200101</td>
+                <td>CLAUDIO MIGUEL</td>
+                <td>VANCE COX</td>
+                <td>PREGRADO</td>
+                </tr>
+                <tr>
+                <td>14</td>
+                <td>11200018</td>
+                <td>EDINSON JOAQUIN</td>
+                <td>HOUSE TORRES</td>
+                <td>POSTGRADO</td>
+                </tr>
+                <tr>
+                <td>15</td>
+                <td>17200077</td>
+                <td>ALEX CRISTHIAN</td>
+                <td>GARAY MORENO</td>
+                <td>PREGRADO</td>
+                </tr>
+                <tr>
+                <td>16</td>
+                <td>17200088</td>
+                <td>CRISTHIAN ANTHONI</td>
+                <td>MORALES DUAREZ</td>
+                <td>PREGRADO</td>
+                </tr>
+                <tr>
+                <td>17</td>
+                <td>17200033</td>
+                <td>YUDI LEONARDA</td>
+                <td>FROST YAMAMOTO</td>
+                <td>PREGRADO</td>
+                </tr>
+                <tr>
+                <td>18</td>
+                <td>17200128</td>
+                <td>AGUSTINA FERNANDA</td>
+                <td>MEJIA MOLINA</td>
+                <td>PREGRADO</td>
+                </tr>
+                <tr>
+                <td>19</td>
+                <td>17200061</td>
+                <td>PAUL LABILE</td>
+                <td>ACOSTA KIMPEMBE</td>
+                <td>PREGRADO</td>
+                </tr>
+                <tr>
+                <td>20</td>
+                <td>17200113</td>
+                <td>ANTOINE LUKA</td>
+                <td>HERNANDEZ CHILCA</td>
+                <td>PREGRADO</td>
+                </tr>
+                <tr>
+                <td>21</td>
+                <td>07286198</td>
+                <td>OLIVER KILIAN</td>
+                <td>RAMOS BALDWIN</td>
+                <td>PROFESOR</td>
+                </tr>
+                <tr>
+                <td>22</td>
+                <td>17200087</td>
+                <td>ALDO RAUL</td>
+                <td>NIXON GUNNARSUN</td>
+                <td>POSTGRADO</td>
+                </tr>
+                <tr>
+                <td>23</td>
+                <td>17200063</td>
+                <td>JUANA EDITH</td>
+                <td>MOONEY SERRANO</td>
+                <td>PREGRADO</td>
+                </tr>
+                <tr>
+                <td>24</td>
+                <td>12200087</td>
+                <td>BRAYAN RENSO</td>
+                <td>HARELL LOPEZ</td>
+                <td>POSTGRADO</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                <th>Número</th>
+                <th>Código</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Categoría</th>
+                </tr>
+             </tfoot>
+              </table>
+              </div>
+              <!-- Ingreso de las imágenes -->
+              <div class="container-fluid">
+                <div class="row col-md-offset-2">
+                  <div class="col-md-6">
+                    <img th:src="@{/img/turnos.png}">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+ </section>
+</body>
+</html>

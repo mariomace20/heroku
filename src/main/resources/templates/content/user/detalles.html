@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/layout}">
+<head>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<section layout:fragment="content" class="banner-area relative tamaño-contenido-detalle-biblioteca">
+		<div class="container contenido">
+			<h3>Detalles</h3>
+			<table class="table table-bordered table-striped">
+				<thead>
+					<tr>
+						<th>N° de Cubiculo</th>
+						<th>Estado</th>
+						<th>Hora de ingreso</th>
+						<th>Tiempo restante</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="prestamo : ${prestamos}">
+							<td th:if="${prestamo.estadoPrestamo} == 'disponible'" class="table-disponible" th:text="${prestamo.idRecurso}"></td>
+							<td th:if="${prestamo.estadoPrestamo} == 'ocupada'" class="table-ocupado" th:text="${prestamo.idRecurso}"></td>
+							<td th:if="${prestamo.estadoPrestamo} == 'liberable'" class="table-liberable" th:text="${prestamo.idRecurso}"></td>
+							
+							
+							<td th:if="${prestamo.estadoPrestamo} == 'disponible'" class="table-disponible" th:text="${prestamo.estadoPrestamo}"></td>
+							<td th:if="${prestamo.estadoPrestamo} == 'ocupada'" class="table-ocupado" th:text="${prestamo.estadoPrestamo}"></td>
+							<td th:if="${prestamo.estadoPrestamo} == 'liberable'" class="table-liberable" th:text="${prestamo.estadoPrestamo}"></td>
+				
+							
+							<td th:if="${prestamo.estadoPrestamo} == 'disponible'" class="table-disponible" th:text="${prestamo.horaEntrada}"></td>
+							<td th:if="${prestamo.estadoPrestamo} == 'ocupada'" class="table-ocupado" th:text="${prestamo.horaEntrada}"></td>
+							<td th:if="${prestamo.estadoPrestamo} == 'liberable'" class="table-liberable" th:text="${prestamo.horaEntrada}"></td>
+							
+							
+							<td th:if="${prestamo.estadoPrestamo} == 'disponible'" class="table-disponible" th:text="${prestamo.horaEntrada}"></td>
+							<td th:if="${prestamo.estadoPrestamo} == 'ocupada'" class="table-ocupado" th:text="${prestamo.horaEntrada}"></td>
+							<td th:if="${prestamo.estadoPrestamo} == 'liberable'" class="table-liberable" th:text="${prestamo.horaEntrada}"></td>
+							
+						
+					</tr>
+					
+				</tbody>
+			</table>
+		</div>
+	</section>
+</body>
+</html>

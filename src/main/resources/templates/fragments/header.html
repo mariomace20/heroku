@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<!-- Header -->
+	<header th:fragment="header" class="default-header">
+		<div class="header-wrap">
+			<div class="header-top d-flex justify-content-between align-items-center">
+				<div class="logo">
+					<a th:href="@{/siscae/inicio}"> 
+					<img th:src="@{/img/libros-icon64.png}">
+					<h3 class="text-heading">SISCAE</h3>
+					</a>
+				</div>
+				<div class="main-menubar d-flex align-items-center">
+					<nav class="hide">
+						<a class="menubar-btn" th:href="@{/siscae/detalles_biblioteca}">DETALLES</a>
+						<a class="menubar-btn" th:href="@{/siscae/registroManual_biblioteca}">REGISTRAR PRÉSTAMO
+							</a> 
+						<a class="menubar-btn" th:href="@{/siscae/registroFinPrestamo_biblioteca}">REGISTRAR FIN DE PRÉSTAMO</a>
+						<a class="menubar-btn" th:href="@{/siscae/nuevos}">SOLICITANTES
+							NUEVOS</a> 
+						<a class="menubar-btn" th:href="@{/siscae/login?logout}">SALIR</a>
+					</nav>
+					<div class="menu-bar">
+						<span class="lnr lnr-menu"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- Fin Header -->
+
+</body>
+</html>
